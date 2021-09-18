@@ -34,7 +34,7 @@ namespace Kyoshinmonita_Sample
                 bitmap1.MakeTransparent();
                 pictureBox1.BackgroundImage = bitmap1;
 
-                pictureBox1.ImageLocation = $"http://www.kmoni.bosai.go.jp/data/map_img/PSWaveImg/eew/20210213/20210213230830.eew.gif";
+                pictureBox1.ImageLocation = $"http://www.kmoni.bosai.go.jp/data/map_img/PSWaveImg/eew/{dt.ToString("yyyyMMdd")}/{dt.ToString("yyyyMMddHHmmss")}.eew.gif";
             }
             catch
             {
