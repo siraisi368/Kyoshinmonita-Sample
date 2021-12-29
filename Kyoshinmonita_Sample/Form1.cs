@@ -20,6 +20,8 @@ namespace Kyoshinmonita_Sample
             InitializeComponent();
         }
 
+        private readonly WebClient wc1 = new WebClient();
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
@@ -27,7 +29,6 @@ namespace Kyoshinmonita_Sample
                 DateTime dt1 = DateTime.Now;
                 var dt = dt1.AddSeconds(-2);
                 var url1 = $"http://www.kmoni.bosai.go.jp//data/map_img/RealTimeImg/acmap_s/{dt.ToString("yyyyMMdd")}/{dt.ToString("yyyyMMddHHmmss")}.acmap_s.gif";
-                WebClient wc1 = new WebClient();
                 Stream stream1 = wc1.OpenRead(url1);
                 Bitmap bitmap1 = new Bitmap(stream1);
                 stream1.Close();
